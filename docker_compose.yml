@@ -37,4 +37,4 @@ services:
       - ./projetDevopsSimple:/var/www/html/projet
 
 volumes:
-  mysql-data
+  mysql-data :
