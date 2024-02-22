@@ -5,6 +5,7 @@ on:
     branches: ["main"]
   pull_request:
     branches: ["main"]
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -22,7 +23,6 @@ jobs:
         extensions: mbstring, xml, ctype, iconv, intl, pdo, pdo_mysql, dom, filter, gd, iconv, json, mbstring, pdo
       env:
         update: true
-          
 
     # Display current directory structure
     - name: List directory contents
@@ -31,7 +31,6 @@ jobs:
     # Build et run du Docker containers
     - name: Build et run du Docker containers
       run: |
-        cd "$(find . -type d -name 'projetDevopsSimple' -print -quit)"
         docker-compose up --build -d
 
     # Déploiement
