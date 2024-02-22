@@ -34,7 +34,7 @@ services:
       - mysql-phpmyadmin
     restart: always
     volumes:
-      - .:/var/www/html/projet
+      - :/var/www/html/projet
 
 volumes:
   mysql-data :
