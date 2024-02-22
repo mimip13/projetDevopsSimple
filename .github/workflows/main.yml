@@ -24,18 +24,16 @@ jobs:
       env:
         update: true
 
-    # Display current directory structure
-    - name: List directory contents
-      run: ls -R
-
+ 
     # Build et run du Docker containers
     - name: Build et run du Docker containers
       run: |
         docker-compose up --build -d
+      working-directory: ./projet
 
     # Déploiement
     - name: Déploiement
       uses: peaceiris/actions-gh-pages@v3
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: projetDevopsSimple
+        github_token: ${{ secrets.PATH }}
+        publish_dir: ./projet
