@@ -33,8 +33,6 @@ services:
     networks:
       - mysql-phpmyadmin
     restart: always
-    volumes:
-      - ./marketlev:/var/www/html/projet
-      
+
 volumes:
   mysql-data:
