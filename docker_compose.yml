@@ -33,6 +33,8 @@ services:
     networks:
       - mysql-phpmyadmin
     restart: always
+    volumes:
+      - ./projetDevopsSimple:/var/www/html/projet
 
 volumes:
-  mysql-data:
+  mysql-data
