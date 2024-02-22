@@ -23,7 +23,6 @@ jobs:
         extensions: mbstring, xml, ctype, iconv, intl, pdo, pdo_mysql, dom, filter, gd, iconv, json, mbstring, pdo
       env:
         update: true
-
  
     # Build et run du Docker containers
     - name: Build et run du Docker containers
